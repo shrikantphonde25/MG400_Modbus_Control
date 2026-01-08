@@ -1,0 +1,600 @@
+[
+    {
+        "id": "b4766e6191f62571",
+        "type": "ui_button",
+        "z": "5a67eb11fefb78bb",
+        "name": "",
+        "group": "f71b7679a155b85a",
+        "order": 1,
+        "width": 5,
+        "height": 3,
+        "passthru": false,
+        "label": "Start",
+        "tooltip": "Starts the Bot",
+        "color": "Green",
+        "bgcolor": "White",
+        "className": "",
+        "icon": "play_arrow",
+        "payload": "{\"command\":\"start\"}",
+        "payloadType": "json",
+        "topic": "start",
+        "topicType": "msg",
+        "x": 270,
+        "y": 360,
+        "wires": [
+            [
+                "f6a1ee2cb7c9d4e9"
+            ]
+        ]
+    },
+    {
+        "id": "9a477941c3c91309",
+        "type": "ui_button",
+        "z": "5a67eb11fefb78bb",
+        "name": "",
+        "group": "de55e45e41c04fc6",
+        "order": 1,
+        "width": 5,
+        "height": 3,
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "Stops the Bot",
+        "color": "Red",
+        "bgcolor": "White",
+        "className": "",
+        "icon": "stop",
+        "payload": "{\"command\":\"stop\"}",
+        "payloadType": "json",
+        "topic": "stop",
+        "topicType": "msg",
+        "x": 270,
+        "y": 660,
+        "wires": [
+            [
+                "f6a1ee2cb7c9d4e9"
+            ]
+        ]
+    },
+    {
+        "id": "da6eace19c3fa2c9",
+        "type": "ui_button",
+        "z": "5a67eb11fefb78bb",
+        "name": "",
+        "group": "b9f19492b5fe412f",
+        "order": 1,
+        "width": 5,
+        "height": 3,
+        "passthru": false,
+        "label": "Pause",
+        "tooltip": "Pauses the Bot",
+        "color": "Blue",
+        "bgcolor": "White",
+        "className": "",
+        "icon": "pause",
+        "payload": "{\"command\":\"pause\"}",
+        "payloadType": "json",
+        "topic": "pause",
+        "topicType": "msg",
+        "x": 270,
+        "y": 520,
+        "wires": [
+            [
+                "f6a1ee2cb7c9d4e9"
+            ]
+        ]
+    },
+    {
+        "id": "4fd728cbfd54c34b",
+        "type": "ui_button",
+        "z": "5a67eb11fefb78bb",
+        "name": "",
+        "group": "df86814fd3acb1db",
+        "order": 1,
+        "width": 5,
+        "height": 3,
+        "passthru": false,
+        "label": "Resume",
+        "tooltip": "Resumes the Bot",
+        "color": "Orange",
+        "bgcolor": "White",
+        "className": "",
+        "icon": "fast_forward",
+        "payload": "{\"command\":\"resume\"}",
+        "payloadType": "json",
+        "topic": "resume",
+        "topicType": "msg",
+        "x": 280,
+        "y": 760,
+        "wires": [
+            [
+                "f6a1ee2cb7c9d4e9"
+            ]
+        ]
+    },
+    {
+        "id": "e214331c5f8645fc",
+        "type": "modbus-write",
+        "z": "5a67eb11fefb78bb",
+        "name": "Program Control",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "0",
+        "quantity": "1",
+        "server": "293a0680f3b86d6a",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "1",
+        "x": 700,
+        "y": 360,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "30ac1c3c0bd2202c",
+        "type": "modbus-write",
+        "z": "5a67eb11fefb78bb",
+        "name": "Program Control",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "1",
+        "quantity": "1",
+        "server": "293a0680f3b86d6a",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "1",
+        "x": 720,
+        "y": 520,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e99a8db75eba42aa",
+        "type": "modbus-write",
+        "z": "5a67eb11fefb78bb",
+        "name": "Program Control",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "3",
+        "quantity": "1",
+        "server": "293a0680f3b86d6a",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "1",
+        "x": 740,
+        "y": 660,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "2c5159c2e3ec6f97",
+        "type": "modbus-write",
+        "z": "5a67eb11fefb78bb",
+        "name": "Program Control",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Coil",
+        "adr": "2",
+        "quantity": "1",
+        "server": "293a0680f3b86d6a",
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "1",
+        "x": 760,
+        "y": 760,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "f6a1ee2cb7c9d4e9",
+        "type": "function",
+        "z": "5a67eb11fefb78bb",
+        "name": "Loop",
+        "func": "\nlet cmd = msg.payload?.command;\n\nif (!cmd) {\n    node.warn(\"No command received\");\n    return null;\n}\n\n\nconst COILS = {\n    start: 0,\n    pause: 1,\n    stop: 3,\n    resume: 2\n};\n\nmsg.address = COILS[cmd];\n\nnode.status({ fill: \"green\", shape: \"dot\", text: cmd });\n\nnode.send({ ...msg, payload: 1 });\n\nsetTimeout(() => {\n    node.send({ ...msg, payload: 0 });\n}, 200);\n\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 580,
+        "wires": [
+            [
+                "e214331c5f8645fc",
+                "30ac1c3c0bd2202c",
+                "e99a8db75eba42aa",
+                "2c5159c2e3ec6f97"
+            ]
+        ]
+    },
+    {
+        "id": "ceec7760891accaa",
+        "type": "function",
+        "z": "5a67eb11fefb78bb",
+        "name": "function 1",
+        "func": "if (msg.payload[0] === true) {\n    msg.payload = \"RUNNING\";\n    return msg;\n}\n\n// do nothing when false\nreturn null;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 380,
+        "wires": [
+            [
+                "5278983c92b2f67d"
+            ]
+        ]
+    },
+    {
+        "id": "63e83ad238e5260f",
+        "type": "modbus-read",
+        "z": "5a67eb11fefb78bb",
+        "name": "Running Status",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Input",
+        "adr": "3",
+        "quantity": "1",
+        "rate": "500",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "enableDeformedMessages": false,
+        "startDelayTime": "",
+        "server": "293a0680f3b86d6a",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 1000,
+        "y": 380,
+        "wires": [
+            [
+                "ceec7760891accaa"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "495ac550dc2dbde9",
+        "type": "modbus-read",
+        "z": "5a67eb11fefb78bb",
+        "name": "Pause Status",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Input",
+        "adr": "2",
+        "quantity": "1",
+        "rate": "500",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "enableDeformedMessages": false,
+        "startDelayTime": "",
+        "server": "293a0680f3b86d6a",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 990,
+        "y": 480,
+        "wires": [
+            [
+                "293abd279c5c11bd"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "5278983c92b2f67d",
+        "type": "ui_text",
+        "z": "5a67eb11fefb78bb",
+        "group": "e922decf4506f430",
+        "order": 1,
+        "width": 5,
+        "height": 3,
+        "name": "",
+        "label": "Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1490,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e646b8ab309c634b",
+        "type": "modbus-read",
+        "z": "5a67eb11fefb78bb",
+        "name": "Stop Status",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "Input",
+        "adr": "1",
+        "quantity": "1",
+        "rate": "500",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "enableDeformedMessages": false,
+        "startDelayTime": "",
+        "server": "293a0680f3b86d6a",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 990,
+        "y": 580,
+        "wires": [
+            [
+                "21173a2985ef010d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "293abd279c5c11bd",
+        "type": "function",
+        "z": "5a67eb11fefb78bb",
+        "name": "function 2",
+        "func": "if (msg.payload[0] === true) {\n    msg.payload = \"PAUSED\";\n    return msg;\n}\n\n// do nothing when false\nreturn null;\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 480,
+        "wires": [
+            [
+                "5278983c92b2f67d"
+            ]
+        ]
+    },
+    {
+        "id": "21173a2985ef010d",
+        "type": "function",
+        "z": "5a67eb11fefb78bb",
+        "name": "function 3",
+        "func": "if (msg.payload[0] === true) {\n    msg.payload = \"STOPPED\";\n    return msg;\n}\n\n// do nothing when false\nreturn null;\n\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 580,
+        "wires": [
+            [
+                "5278983c92b2f67d"
+            ]
+        ]
+    },
+    {
+        "id": "d7ebdec01e1136b7",
+        "type": "modbus-read",
+        "z": "5a67eb11fefb78bb",
+        "name": "Feedback",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "1",
+        "dataType": "InputRegister",
+        "adr": "202",
+        "quantity": "8",
+        "rate": "500",
+        "rateUnit": "ms",
+        "delayOnStart": false,
+        "enableDeformedMessages": false,
+        "startDelayTime": "",
+        "server": "293a0680f3b86d6a",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 1020,
+        "y": 700,
+        "wires": [
+            [
+                "e1fe017199891c3e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e1fe017199891c3e",
+        "type": "function",
+        "z": "5a67eb11fefb78bb",
+        "name": "function 4",
+        "func": "function toFloat32(low, high) {\n    const buf = Buffer.alloc(4);\n    buf.writeUInt16BE(high, 0); \n    buf.writeUInt16BE(low, 2); \n    return buf.readFloatBE(0);\n}\n\nfunction round2(x) {\n    return Math.round(x * 100) / 100;\n}\n\nconst r = msg.payload;\n\nconst J1 = round2(toFloat32(r[0], r[1]));\nconst J2 = round2(toFloat32(r[2], r[3]));\nconst J3 = round2(toFloat32(r[4], r[5]));\nconst J4 = round2(toFloat32(r[6], r[7]));\n\nmsg.payload =\n  \"J1: \" + J1 + \"<br>\" +\n  \"J2: \" + J2 + \"<br>\" +\n  \"J3: \" + J3 + \"<br>\" +\n  \"J4: \" + J4;\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 700,
+        "wires": [
+            [
+                "86950551e270f9a6"
+            ]
+        ]
+    },
+    {
+        "id": "86950551e270f9a6",
+        "type": "ui_text",
+        "z": "5a67eb11fefb78bb",
+        "group": "e2bfde53249edb70",
+        "order": 0,
+        "width": "5",
+        "height": "3",
+        "name": "",
+        "label": "Joint Angles",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1390,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "f71b7679a155b85a",
+        "type": "ui_group",
+        "name": "",
+        "tab": "60c1d84ad107a8e8",
+        "order": 1,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "de55e45e41c04fc6",
+        "type": "ui_group",
+        "name": "",
+        "tab": "60c1d84ad107a8e8",
+        "order": 3,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b9f19492b5fe412f",
+        "type": "ui_group",
+        "name": "",
+        "tab": "60c1d84ad107a8e8",
+        "order": 2,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "df86814fd3acb1db",
+        "type": "ui_group",
+        "name": "",
+        "tab": "60c1d84ad107a8e8",
+        "order": 4,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "293a0680f3b86d6a",
+        "type": "modbus-client",
+        "name": "Modbus MG400",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.6.2",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": 9600,
+        "serialDatabits": 8,
+        "serialStopbits": 1,
+        "serialParity": "none",
+        "serialConnectionDelay": 100,
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "e922decf4506f430",
+        "type": "ui_group",
+        "name": "",
+        "tab": "60c1d84ad107a8e8",
+        "order": 5,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e2bfde53249edb70",
+        "type": "ui_group",
+        "name": "",
+        "tab": "60c1d84ad107a8e8",
+        "order": 6,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "60c1d84ad107a8e8",
+        "type": "ui_tab",
+        "name": "MG400 Controller",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0f3c1057cde21f59",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-modbus": "5.45.2"
+        }
+    }
+]
